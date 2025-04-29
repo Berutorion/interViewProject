@@ -40,3 +40,18 @@
 .read-the-docs {
   color: #888;
 }
+
+/* 移動端卡片樣式 */
+@media (max-width: 768px) {
+  .ant-card {
+    margin-bottom: 16px;
+  }
+  .ant-col-12 {
+    padding: 0 8px;
+  }
+}
+
+/* 桌面端表格樣式 */
+.ant-table {
+  overflow-x: auto;
+}
