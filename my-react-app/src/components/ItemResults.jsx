@@ -55,7 +55,7 @@ isMobile ? (
     <Table
       columns={columns}
       dataSource={displayItems}
-      rowKey="id"
+      rowKey="name"
       pagination={{ 
         ...pagination,
         total: filteredItems.length,

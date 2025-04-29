@@ -6,11 +6,11 @@ const { Option } = Select;
 
 const ItemFilter = ({ items, onFilterChange }) =>{
 
-    const [searchText, setSearchText] = useState('');
+    const [searchText, setSearchText] = useState("");
     const [selectedCategories, setSelectedCategories] = useState([]);
     const [priceRange, setPriceRange] = useState([0, 1000]);
     const [inStockOnly, setInStockOnly] = useState(false);
-    const [sortOrder, setSortOrder] = useState(null);
+    const [sortOrder, setSortOrder] = useState(undefined);
     
   // 獲取所有類別選項
   const categories = useMemo(() => {
@@ -81,12 +81,12 @@ const ItemFilter = ({ items, onFilterChange }) =>{
     </Checkbox>
     
     <Radio.Group
-      value={sortOrder}
+      value={sortOrder || undefined}
       onChange={(e) => setSortOrder(e.target.value)}
     >
       <Radio.Button value="asc">價格升序</Radio.Button>
       <Radio.Button value="desc">價格降序</Radio.Button>
-      <Radio.Button value={null}>預設排序</Radio.Button>
+      <Radio.Button value={undefined}>預設排序</Radio.Button>
     </Radio.Group>
   </div>
 );
